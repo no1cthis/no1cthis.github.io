@@ -1,0 +1,60 @@
+.welcome{
+    display: flex;
+    width: 100%;
+    flex-grow: 1;
+}
+
+.scroller{
+    position: relative;
+    &__wrapper{
+        position: absolute;
+        left: 50%;
+        bottom: 10%;
+        transform: translateX(-50%);
+        height: 50px;
+        width: 30px;
+        border: 2px #6b6b6b solid;
+        border-radius: 15px;
+        background-color: rgb(130, 41, 41);
+}
+
+    &__point{
+        position: absolute;
+        left: 50%;
+        top:5px;
+        width: 7px;
+        height: 7px;
+        transform: translateX(-50%);
+        border-radius: 50%;
+        background-color: #949494;
+        animation: point 3s infinite;
+    }
+
+    @keyframes point {
+        0%{top:2px}
+        70%{top:15px}
+        100%{top:2px}
+    }
+
+    &__arrows{
+        position: absolute;
+        bottom:-90%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    &__arrow{
+        width: 15px;
+        height: 15px;
+        border-bottom: 2px #949494 solid;
+        border-right: 2px #949494 solid;
+        transform: rotate(45deg);
+        animation: arrow 3s infinite;
+    }
+
+    @keyframes arrow {
+        0%{transform: rotate(45deg) translate3d(-10%, -10%, 0);}
+        70%{transform: rotate(45deg) translate3d(10%, 10%, 0); opacity: 0.3;}
+        100%{transform: rotate(45deg) translate3d(-10%, -10%, 0);}
+    }
+}

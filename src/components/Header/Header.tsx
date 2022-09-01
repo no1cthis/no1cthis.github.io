@@ -17,7 +17,7 @@ const Header: React.FC<HeaderProps> = () => {
           </a>
         </li>
       </ul>
-      <div className={`${cl.contact} ${cl.link}`} data-text={"Contact me"}>
+      <div className={`${cl.contact}`} data-text={"Contact me"}>
         <span>Contact</span>
       </div>
     </header>
