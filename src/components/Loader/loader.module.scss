@@ -1,0 +1,50 @@
+.wrapper{
+    position: fixed;
+    top:0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 100vh;
+    width: 100vw;
+    background-color: #000;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loader{
+    position: relative;
+    width: 80vw;
+    height: 70px;
+    border: 3px #fff solid;
+    border-radius: 400px;
+    // border-color: red;
+    font-size: 36px;
+    font-weight: 700;
+    color:#fff;
+    pointer-events: none;
+    &__text{
+        position: absolute;
+        bottom: 50%;
+        left: 50%;
+        transform: translate(-50%, 50%);
+        letter-spacing: 15px;
+        text-transform: uppercase;
+    }
+    &__counter{
+        position: absolute;
+        bottom:-70%;
+        left:50%;
+        transform: translateX(-50%);
+    }
+}
+.background{
+    position: absolute;
+    top:0;
+    left:0;
+    height: 100vh;
+    width: 100vw;
+    opacity: 0;
+    // z-index: -1;
+}
