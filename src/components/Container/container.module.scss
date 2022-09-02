@@ -1,0 +1,31 @@
+
+
+.container{
+    display: flex;
+    flex-direction: column;
+    max-width: 1400px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+@media (max-width: 1024px) {
+    .container{
+        display: flex;
+        max-width: 904px;
+        margin: 0 auto  ;
+    } 
+}
+@media (max-width: 768px) {
+    .container{
+        display: flex;
+        max-width: 704px;
+        margin: 0 auto  ;
+    } 
+}
+@media (max-width: 360px) {
+    .container{
+        display: flex;
+        max-width: 328px;
+        margin: 0 auto  ;
+    } 
+}

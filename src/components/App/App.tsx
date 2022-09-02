@@ -6,14 +6,21 @@ import Header from "../Header/Header";
 import Social from "../Social/Social";
 import WelcomeSection from "../WelcomeSection/WelcomeSection";
 import Skills from "../Skills/Skills";
+import ProjectsList from "../ProjectsList/ProjectsList";
+import Container from "../Container/Container";
 
 function App() {
   return (
     <div className={cl.app}>
-      <Header />
       <Loader />
-      <WelcomeSection />
+      <Container>
+        <Header />
+        <WelcomeSection />
+      </Container>
       <Skills />
+      <Container>
+        <ProjectsList />
+      </Container>
       <Social />
     </div>
   );

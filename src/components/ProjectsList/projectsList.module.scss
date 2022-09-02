@@ -1,0 +1,16 @@
+@import '../../scss/variables.scss';
+.wrapper{
+    margin-top: 50px;
+    font-size: 24px;
+    background-color: rgba(#000, 0.6);
+}
+.title{
+    font-family: 'Unfinished Sympathy', sans-serif;
+    font-size: 56px;
+    font-weight: 900;
+    color:$primary-color;
+    margin: 0 auto;
+    width: fit-content;
+    margin-bottom: 50px;
+}
+
