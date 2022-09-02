@@ -1,0 +1,36 @@
+@import '../../scss/variables.scss';
+.wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    margin-top: 50px;
+    overflow: hidden;
+    font-family: 'Unfinished Sympathy', sans-serif;
+    color: $primary-color;
+}
+.title{
+    font-size: 80px;
+}
+.text{
+    white-space: nowrap;
+    font-size: 50px;
+}
+.moveLeft{
+    width: fit-content;
+    animation: moveL 30s infinite linear;
+    @keyframes moveL {
+        0%{transform: translate3d(0,0,0);}
+        100%{transform: translate3d(-50.8%,0,0);}
+    }
+}
+.moveRight{
+    width: fit-content;
+    animation: moveR 20s infinite linear;
+    @keyframes moveR {
+        0%{transform: translate3d(-50.8%,0,0);}
+        100%{transform: translate3d(0,0,0);}
+    }
+}
+
+

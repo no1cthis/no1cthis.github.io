@@ -1,15 +1,41 @@
+import { useEffect, useState } from "react";
 import cl from "./welcomeSection.module.scss";
 
 interface WelcomeSectionProps {}
 
-const WelcomeSection: React.FC<WelcomeSectionProps> = () => {
+const WelcomeSection: React.FC<WelcomeSectionProps> = ({}) => {
+  const [width, setWidth] = useState(0);
+  const [height, setHeight] = useState(0);
+  const headerHeight = 100;
+
+  console.log(window.innerHeight - headerHeight);
+
+  useEffect(() => {
+    setHeight(window.innerHeight - headerHeight);
+    window.addEventListener("resize", () => {
+      setWidth(window.innerWidth);
+      setHeight(window.innerHeight - headerHeight);
+    });
+
+    return () => {
+      window.removeEventListener("resize", () => {
+        setWidth(window.innerWidth);
+        setHeight(window.innerHeight - headerHeight);
+      });
+    };
+  }, []);
+  console.log(window.innerHeight - headerHeight);
+  console.log(height);
   return (
-    <section className={cl.welcome}>
-
-    <div className={cl.text}>
-        
-    </div>
-
+    <section className={cl.welcome} style={{ height: `${height}px` }}>
+      <div className={cl.text}>
+        Hi, my name is <br />
+        <span>Mykyta Krukovskyi </span>
+        <br /> I'm a front-end developer and <br />
+        third-year computer science
+        {window.innerWidth < 1200 ? <br /> : null} student{" "}
+        {window.innerWidth > 1200 ? <br /> : null} from Ukraine
+      </div>
 
       <div className={cl.scroller__wrapper}>
         <div className={cl.scroller}>

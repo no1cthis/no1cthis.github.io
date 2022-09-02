@@ -1,4 +1,9 @@
+@import '../../scss/variables.scss';
+
+
 .header{
+    
+    font-family: 'Unfinished Sympathy', sans-serif;
     display: flex;
     max-width: 1300px;
     margin: 20px auto;
@@ -26,25 +31,24 @@
     cursor: pointer;
     overflow: hidden;
     transition: all 0.6s;
+    padding: 5px;
 
     & span{
         left:0;
         top:0;
         transition: all 0.6s;
+        color: $primary-color;
     }
 
     
     &:hover span{
-        display: block;
-        transform: translate3d(-150%,0,0);
-
-       
-        
+        transform: translate3d(-150%,0,0);       
     }
   
     &::after{
         content: attr(data-text);
         position: absolute;
+        padding: 5px;
         top:0;
         left: 0;
         width: 100%;
@@ -52,6 +56,7 @@
         transform: translate3d(150%,0,0);
         transition: transform 0.6s;
         overflow: hidden;
+        color: $color-text;
     }
     &:hover::after{
         transform: translate3d(0,0,0);
@@ -65,7 +70,7 @@
         bottom: 0px;
         width: 100%;
         height: 3px;
-        background-color: currentColor;
+        background-color: $secondary-color;
         transform: scale3d(0,1,1);
         transform-origin: right;
         transition: transform 0.6s;
@@ -84,11 +89,11 @@
     transition-duration: 0.6s, 0.6s, .3s;
     transition-delay: 0.4s, 0.4s, 0s;
     transition-property: clip-path, padding, color;
-    color:#fff;
-    mix-blend-mode: difference;
+    color:$color-text;
+    font-family: 'Bolandes', sans-serif;
     &:hover{
         color:rgb(22, 22, 22);
-        padding: 5px 20px 20px;
+        padding: 10px 20px 20px;
         clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 75% 75%, 75% 100%, 50% 75%, 0% 75%);
         @media (max-width:550px) {
             &{padding: 2px 10px 10px;}
@@ -98,7 +103,7 @@
         content: '';
         position: absolute;
         z-index: -1;
-        background-color:  rgb(130, 41, 41);
+        background-color:  $primary-color;
         width: 100%;
         height: 100%;
         top:0;

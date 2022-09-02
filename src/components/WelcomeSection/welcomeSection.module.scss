@@ -1,7 +1,52 @@
+@import '../../scss/variables.scss';
+
+
+.text{
+    font-size: 50px;
+    margin-top: 100px;
+    margin-left: 20px;
+
+    font-family: 'Winter Kei', sans-serif;
+    color: $color-text;
+    
+    @media (max-width:1100px) {
+        font-size: 45px;
+        
+    }
+    @media (max-width:900px) {
+        font-size: 40px;
+        
+    }
+    @media (max-width:830px) {
+        font-size: 35px;
+        
+    }
+    @media (max-width:750px) {
+        font-size: 30px;
+        
+    }
+    @media (max-width:660px) {
+        font-size: 25px;
+        
+    }
+    @media (max-width:480px) {
+        font-size: 20px;
+    }
+    @media (max-width:400px) {
+        margin-top: 140px;
+        font-size: 15px;
+    }
+
+    span{
+        color: $primary-color;
+        font-weight: 700;
+    }
+}
+
 .welcome{
     display: flex;
     width: 100%;
-    flex-grow: 1;
+    // flex-grow: 1;
 }
 
 .scroller{
@@ -15,7 +60,7 @@
         width: 30px;
         border: 2px #6b6b6b solid;
         border-radius: 15px;
-        background-color: rgb(130, 41, 41);
+        background-color: $primary-color;
 }
 
     &__point{
@@ -54,7 +99,8 @@
 
     @keyframes arrow {
         0%{transform: rotate(45deg) translate3d(-10%, -10%, 0);}
-        70%{transform: rotate(45deg) translate3d(10%, 10%, 0); opacity: 0.3;}
+        30%{transform: rotate(45deg) translate3d(10%, 10%, 0); opacity: 0.3;}
         100%{transform: rotate(45deg) translate3d(-10%, -10%, 0);}
     }
 }
+
