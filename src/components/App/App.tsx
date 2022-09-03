@@ -8,6 +8,7 @@ import WelcomeSection from "../WelcomeSection/WelcomeSection";
 import Skills from "../Skills/Skills";
 import ProjectsList from "../ProjectsList/ProjectsList";
 import Container from "../Container/Container";
+import Contact from "../Contact/Contact";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
       <Skills />
       <Container>
         <ProjectsList />
+        <Contact />
       </Container>
       <Social />
     </div>

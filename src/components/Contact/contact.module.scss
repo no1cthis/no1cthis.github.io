@@ -1,0 +1,153 @@
+@import '../../scss/variables.scss';
+.wrapper{
+    background-color: rgba(60, 60, 60, 0.2);
+    padding: 40px;
+    font-family: 'Bolandes', sans-serif;
+    font-size: 24px;
+    color:#fff;
+    textarea{
+        margin-left: 10px;
+        white-space: nowrap;
+        transform: translateY(15px);
+        color:#fff;
+        background-color: transparent;
+        border: none;
+        border-bottom: 2px currentColor solid;
+        resize: none;
+        overflow: visible;
+        &:focus{
+            outline: none;
+        }
+        @media (max-width: 835px) {
+            &{
+                transform: translateY(-10px);
+            }
+        }
+    }
+    @media (max-width: 380px) {
+        &{
+            padding: 30px;
+        }
+    }
+    @media (min-width: 1025px) {
+        &{
+            margin: 0 60px;
+        }
+    }
+    @media (min-width: 1260px) {
+        &{
+            font-size: 36px;
+        }
+    }
+}
+.title{
+    font-size: 56px;
+}
+.name{
+    width: 150px;
+    @media (max-width: 835px) {
+        &{
+            width: 90%;
+        }
+    }
+}
+.mail{
+    width: 400px;
+    transform: translateY(-3px) !important;
+    @media (max-width: 835px) {
+        &{
+            width: 90%;
+        }
+    }
+}
+.purpose{
+    width: 30vw;
+    @media (max-width: 835px) {
+        &{
+            width: 90%;
+        }
+    }
+    @media (min-width: 1200px) {
+        &{
+            width: 360px;
+        }
+    }
+}
+
+.message{
+    margin-top: 50px;
+    margin-left: 0;
+    white-space: normal !important;
+    width: 100%;
+    height: 150px;
+    font-size: 24px;
+    @media (max-width: 835px) {
+        &{
+            margin-top: 20px;
+        }
+    }
+}
+
+.line{
+    margin-bottom: 30px;
+    display: flex;
+    @media (max-width: 835px) {
+        &{
+            flex-direction: column;
+        }
+        label{
+            display: block;
+            margin: 20px 0;
+        }
+    }
+}
+.substring{
+    @media (min-width: 1260px) {
+        &{
+            margin-left: 20px;
+        }
+    }
+}
+.purposeLine{
+    margin-bottom: 10px;
+    @media (max-width: 380px) {
+        &{
+           margin-top: 100px;
+        }
+    }
+}
+
+.sendBtn{
+    position: relative;
+    color:#fff;
+    display: flex;
+    margin: 30px auto 0 auto;
+    background-color: transparent;
+    border: none;
+    z-index: 2;
+    cursor: pointer;
+    &:hover svg path {
+        stroke-dashoffset: 0;
+      }
+    svg{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 150%;
+        height: 150%;
+        z-index: -1;
+        overflow: auto;
+
+        path{
+            fill: transparent;
+            stroke-width: 10px;
+            stroke: currentColor;
+            stroke-dasharray :1212;
+            stroke-dashoffset: 1212;
+            transition: stroke-dashoffset 0.5s cubic-bezier(0.29, 0.68, 0.74, 1.02);
+            
+        }
+    }
+    
+}
