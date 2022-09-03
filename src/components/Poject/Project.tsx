@@ -16,13 +16,13 @@ const Project: React.FC<ProjectProps> = ({
   return (
     <div className={cl.wrapper}>
       <div className={cl.info}>
-        <a href={githubLink} className={cl.github}>
+        <a href={githubLink} className={cl.github} target="_blank">
           Github
           <svg preserveAspectRatio="none" viewBox="0 0 546.714 178.143">
             <path d="M546.214 89.072c0 48.917-122.162 88.571-272.857 88.571C122.662 177.643.5 137.988.5 89.072.5 40.155 122.662.5 273.357.5c150.695 0 272.857 39.655 272.857 88.572z" />
           </svg>
         </a>
-        <a href={liveLink} className={cl.eye__wrapper}>
+        <a href={liveLink} className={cl.eye__wrapper} target="_blank">
           <svg className={cl.textcircle} viewBox="0 0 500 500">
             <defs>
               <path

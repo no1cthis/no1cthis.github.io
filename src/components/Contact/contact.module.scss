@@ -127,7 +127,11 @@
     border: none;
     z-index: 2;
     cursor: pointer;
+    outline: none;
     &:hover svg path {
+        stroke-dashoffset: 0;
+      }
+    &:focus svg path {
         stroke-dashoffset: 0;
       }
     svg{

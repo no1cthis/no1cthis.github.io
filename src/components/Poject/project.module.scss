@@ -6,8 +6,15 @@
     margin-top: 100px;
     margin-bottom: 50px;
     margin-right: 60px;
+    
 
+    &:focus{
+        outline: none;
+    }
     &:hover .name{
+        color: $color-text
+    }
+    &:focus .name{
         color: $color-text
     }
 
@@ -74,6 +81,7 @@
     animation: spin 10s linear infinite;
     cursor: default;
     user-select: none;
+    
 
 }   
 .eye{
@@ -89,6 +97,12 @@
         height: 200px;
         animation: closeEye 3s step-end infinite;
         overflow: hidden;
+        &:focus{
+            outline: none;
+        }
+        &:focus .textcircle{
+            fill:$secondary-color;
+        }
     }
 
     
@@ -140,7 +154,13 @@
     position: relative;
     color: $color-text;
     z-index: 2;
+    &:focus{
+        outline: none;
+    }
     &:hover svg path {
+        stroke-dashoffset: 0;
+      }
+    &:focus svg path {
         stroke-dashoffset: 0;
       }
     svg{

@@ -7,17 +7,17 @@ const Header: React.FC<HeaderProps> = () => {
     <header className={cl.header}>
       <ul className={cl.menu}>
         <li>
-          <a className={cl.link} data-text={"Home"}>
+          <a className={cl.link} data-text={"Home"} tabIndex={0}>
             <span>Home</span>
           </a>
         </li>
         <li>
-          <a className={cl.link} data-text={"Projects"}>
+          <a className={cl.link} data-text={"Projects"} tabIndex={0}>
             <span>Projects</span>
           </a>
         </li>
       </ul>
-      <div className={`${cl.contact}`} data-text={"Contact me"}>
+      <div className={`${cl.contact}`} data-text={"Contact me"} tabIndex={0}>
         <span>Contact</span>
       </div>
     </header>

@@ -25,11 +25,31 @@
         flex-direction: row;
         gap: 20px
     }
+    
+    }
+    a{
+        outline:none;
+        &:focus .social{
+            color:$secondary-color;
+            &::after{
+                transform: scale3d(1,1,1);
+                transition: transform 0.8s;
+                transform-origin: bottom;   
+            }
+        }
+        &:focus .socialCircle{
+            color:$secondary-color;
+            &::after{
+            animation: fillCircle 0.8s ;
+            clip-path: circle(55% at 50% 50%);
+            }
+        }
 }
 .social {
     position: relative;
     cursor: pointer;
     transition: color 0.8s;
+    outline: none;
 
     &::after{
         content: '';
@@ -80,18 +100,17 @@
     }
     &:not(:hover)::after { animation: unfillCircle 0.4s ; } 
 
-    @keyframes fillCircle {
-        0%{ clip-path: circle(0% at 50% 100%);}
-        100%{clip-path: circle(55.0% at 50% 50%);}
-    }
-
-    @keyframes unfillCircle {
-        0%{ clip-path: circle(55.0% at 50% 50%);}
-        100%{clip-path: circle(0% at 50% 0%);}
-    }
-
-
     &:hover{
         color:$secondary-color
     }
+}
+
+@keyframes fillCircle {
+    0%{ clip-path: circle(0% at 50% 100%);}
+    100%{clip-path: circle(55.0% at 50% 50%);}
+}
+
+@keyframes unfillCircle {
+    0%{ clip-path: circle(55.0% at 50% 50%);}
+    100%{clip-path: circle(0% at 50% 0%);}
 }
