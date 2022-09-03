@@ -4,9 +4,11 @@ import photoSiteImg from "../../assets/photoSite.jpg";
 import canvasBGImg from "../../assets/canvasBG.jpg";
 import Project from "../Poject/Project";
 
-interface ProjectsListProps {}
+interface ProjectsListProps {
+  loadedImage: () => void
+}
 
-const ProjectsList: React.FC<ProjectsListProps> = () => {
+const ProjectsList: React.FC<ProjectsListProps> = ({ loadedImage }) => {
   let projects:
     | {
         name: string;
@@ -37,21 +39,17 @@ const ProjectsList: React.FC<ProjectsListProps> = () => {
 
   projects = projects.map((project) => (
     <Project
+      key={project.liveLink}
       name={project.name}
       githubLink={project.githubLink}
       liveLink={project.liveLink}
       image={project.image}
+      loadedImage={loadedImage}
     />
   ));
   return (
     <section className={cl.wrapper}>
       <div className={cl.title}>Some of my works</div>
-      {/* <Project
-        name="Code editor"
-        githubLink="https://github.com/no1cthis/code-editor"
-        liveLink="https://no1cthis.github.io/code-editor/"
-        image={codeEditorImg}
-      /> */}
       {projects}
     </section>
   );

@@ -1,3 +1,4 @@
+@import '../../scss/variables.scss';
 .wrapper{
     position: fixed;
     top:0;
@@ -30,6 +31,7 @@
         transform: translate(-50%, 50%);
         letter-spacing: 15px;
         text-transform: uppercase;
+        z-index: 10;
     }
     &__counter{
         position: absolute;
@@ -37,6 +39,15 @@
         left:50%;
         transform: translateX(-50%);
     }
+}
+.line{
+    position: absolute;
+    top:0px;
+    left: 0px;
+    border-radius: 400px;
+    background-color: $primary-color;
+    height: 100%;
+    width: 0%;
 }
 .background{
     position: absolute;

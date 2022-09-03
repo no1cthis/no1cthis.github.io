@@ -1,4 +1,4 @@
-import React from "react";
+import { useEffect, useRef, useState } from "react";
 import cl from "./app.module.scss";
 import "normalize.css";
 import Loader from "../Loader/Loader";
@@ -11,20 +11,35 @@ import Container from "../Container/Container";
 import Contact from "../Contact/Contact";
 
 function App() {
+  const [loadCount, setLoadCount] = useState(0);
+  const app = useRef<HTMLDivElement>(null);
+
+
+  const loadedImage = () => {
+    setLoadCount((loadCount) => loadCount + 1);
+  };
+
   return (
-    <div className={cl.app}>
-      <Loader />
-      <Container>
-        <Header />
-        <WelcomeSection />
-      </Container>
-      <Skills />
-      <Container>
-        <ProjectsList />
-        <Contact />
-      </Container>
-      <Social />
-    </div>
+    <>
+      <Loader
+        loadCount={loadCount}
+        allImageNumber={4}
+        loadedImage={loadedImage}
+        app={app}
+      />
+      <div className={cl.app} ref={app}>
+        <Container>
+          <Header />
+          <WelcomeSection />
+        </Container>
+        <Skills />
+        <Container>
+          <ProjectsList loadedImage={loadedImage} />
+          <Contact />
+        </Container>
+        <Social />
+      </div>
+    </>
   );
 }
 

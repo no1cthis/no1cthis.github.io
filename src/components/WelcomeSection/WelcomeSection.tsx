@@ -8,8 +8,6 @@ const WelcomeSection: React.FC<WelcomeSectionProps> = ({}) => {
   const [height, setHeight] = useState(0);
   const headerHeight = 100;
 
-  console.log(window.innerHeight - headerHeight);
-
   useEffect(() => {
     setHeight(window.innerHeight - headerHeight);
     window.addEventListener("resize", () => {
@@ -24,8 +22,6 @@ const WelcomeSection: React.FC<WelcomeSectionProps> = ({}) => {
       });
     };
   }, []);
-  console.log(window.innerHeight - headerHeight);
-  console.log(height);
   return (
     <section className={cl.welcome} style={{ height: `${height}px` }}>
       <div className={cl.text}>

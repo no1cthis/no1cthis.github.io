@@ -1,6 +1,7 @@
 @import '../../scss/variables.scss';
 body{
-    color:#fff
+    color:#fff;
+    height: 100vh;
 }
 ul{
     padding: 0;
@@ -14,6 +15,7 @@ li{
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    opacity: 0;
 }
 a{
     text-decoration: none;

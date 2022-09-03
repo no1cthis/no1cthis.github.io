@@ -5,6 +5,7 @@ interface ProjectProps {
   githubLink: string;
   liveLink: string;
   image: string;
+  loadedImage: () => void;
 }
 
 const Project: React.FC<ProjectProps> = ({
@@ -12,6 +13,7 @@ const Project: React.FC<ProjectProps> = ({
   githubLink,
   liveLink,
   image,
+  loadedImage,
 }) => {
   return (
     <div className={cl.wrapper}>
@@ -65,7 +67,15 @@ const Project: React.FC<ProjectProps> = ({
       </div>
       <div className={cl.preview}>
         <div className={cl.name}>{name}</div>
-        <img className={cl.project__image} src={image} alt="test img" />
+        <img
+          className={cl.project__image}
+          src={image}
+          alt={name}
+          onLoad={() => {
+            console.log(`project image ${name}`);
+            loadedImage();
+          }}
+        />
       </div>
     </div>
   );
