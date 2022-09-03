@@ -12,14 +12,24 @@ const Header: React.FC<HeaderProps> = () => {
           </a>
         </li>
         <li>
-          <a className={cl.link} data-text={"Projects"} tabIndex={0}>
+          <a
+            className={cl.link}
+            href={"#projects"}
+            data-text={"Projects"}
+            tabIndex={0}
+          >
             <span>Projects</span>
           </a>
         </li>
       </ul>
-      <div className={`${cl.contact}`} data-text={"Contact me"} tabIndex={0}>
+      <a
+        className={`${cl.contact}`}
+        href={"#contact"}
+        data-text={"Contact me"}
+        tabIndex={0}
+      >
         <span>Contact</span>
-      </div>
+      </a>
     </header>
   );
 };

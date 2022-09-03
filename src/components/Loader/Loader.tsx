@@ -2,7 +2,6 @@ import React, { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
 import cl from "./loader.module.scss";
 
-
 interface LoaderProps {
   loadCount: number;
   allImageNumber: number;
@@ -102,10 +101,7 @@ const Loader: React.FC<LoaderProps> = ({
         ref={background}
         className={cl.background}
         src="https://i.pinimg.com/originals/7b/99/3c/7b993c5dcdb3299da705f32efd87217a.gif"
-        onLoad={() => {
-          console.log("background loaded");
-          loadedImage();
-        }}
+        onLoad={() => loadedImage()}
       />
     </div>
   );

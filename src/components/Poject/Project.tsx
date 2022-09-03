@@ -71,10 +71,7 @@ const Project: React.FC<ProjectProps> = ({
           className={cl.project__image}
           src={image}
           alt={name}
-          onLoad={() => {
-            console.log(`project image ${name}`);
-            loadedImage();
-          }}
+          onLoad={() => loadedImage()}
         />
       </div>
     </div>

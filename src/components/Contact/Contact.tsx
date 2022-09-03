@@ -52,7 +52,9 @@ const Contact: React.FC<ContactProps> = () => {
   };
   return (
     <section className={cl.wrapper}>
-      <p className={cl.title}>Get in touch</p>
+      <p className={cl.title} id="contact">
+        Get in touch
+      </p>
       {sended ? (
         <div>
           I have been received your message{" "}

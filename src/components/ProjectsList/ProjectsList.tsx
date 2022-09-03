@@ -49,7 +49,7 @@ const ProjectsList: React.FC<ProjectsListProps> = ({ loadedImage }) => {
   ));
   return (
     <section className={cl.wrapper}>
-      <div className={cl.title}>Some of my works</div>
+      <div className={cl.title} id='projects'>Some of my works</div>
       {projects}
     </section>
   );

@@ -1,4 +1,7 @@
 @import '../../scss/variables.scss';
+html{
+    scroll-behavior: smooth;
+}
 body{
     color:#fff;
     height: 100vh;
