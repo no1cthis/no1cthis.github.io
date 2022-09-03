@@ -5,6 +5,7 @@
     font-family: 'Bolandes', sans-serif;
     font-size: 24px;
     color:#fff;
+    margin-bottom: 50px;
     textarea{
         margin-left: 10px;
         white-space: nowrap;
@@ -31,7 +32,7 @@
     }
     @media (min-width: 1025px) {
         &{
-            margin: 0 60px;
+            margin: 0 60px 50px;
         }
     }
     @media (min-width: 1260px) {
