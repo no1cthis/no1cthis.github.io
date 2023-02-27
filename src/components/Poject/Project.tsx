@@ -66,13 +66,15 @@ const Project: React.FC<ProjectProps> = ({
         </a>
       </div>
       <div className={cl.preview}>
-        <div className={cl.name}>{name}</div>
-        <img
-          className={cl.project__image}
-          src={image}
-          alt={name}
-          onLoad={() => loadedImage()}
-        />
+        <a href={liveLink} target="_blank">
+          <div className={cl.name}>{name}</div>
+          <img
+            className={cl.project__image}
+            src={image}
+            alt={name}
+            onLoad={() => loadedImage()}
+          />
+        </a>
       </div>
     </div>
   );

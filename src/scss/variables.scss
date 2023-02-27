@@ -3,6 +3,21 @@ $secondary-color: #183153;
 $color-text: #244e89;
 
 // FONTS
-@import url('http://fonts.cdnfonts.com/css/bolandes');
-@import url('http://fonts.cdnfonts.com/css/unfinished-sympathy');
-@import url('http://fonts.cdnfonts.com/css/winter-kei');
+@font-face {
+    font-family: 'Bolandes';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Bolandes'), url('https://fonts.cdnfonts.com/s/72692/BolandesAged-ALAJD.woff') format('woff');
+}
+@font-face {
+    font-family: 'Unfinished Sympathy';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Unfinished Sympathy'), url('https://fonts.cdnfonts.com/s/28397/Unfinished Sympathy.woff') format('woff');
+}
+@font-face {
+    font-family: 'Winter Kei';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Winter Kei'), url('https://fonts.cdnfonts.com/s/32071/Winter Kei.woff') format('woff');
+}

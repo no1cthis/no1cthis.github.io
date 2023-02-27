@@ -1,11 +1,12 @@
 import cl from "./projectsList.module.scss";
+import spanielShopImg from "../../assets/spaniel-shop.jpg";
 import codeEditorImg from "../../assets/codeEditor.jpg";
 import photoSiteImg from "../../assets/photoSite.jpg";
 import canvasBGImg from "../../assets/canvasBG.jpg";
 import Project from "../Poject/Project";
 
 interface ProjectsListProps {
-  loadedImage: () => void
+  loadedImage: () => void;
 }
 
 const ProjectsList: React.FC<ProjectsListProps> = ({ loadedImage }) => {
@@ -17,6 +18,12 @@ const ProjectsList: React.FC<ProjectsListProps> = ({ loadedImage }) => {
         image: any;
       }[]
     | JSX.Element[] = [
+    {
+      name: "Spaniel shop",
+      githubLink: "https://github.com/no1cthis/spaniel-shop",
+      liveLink: "http://13.39.108.216:3000/all",
+      image: spanielShopImg,
+    },
     {
       name: "Code editor",
       githubLink: "https://github.com/no1cthis/code-editor",
@@ -49,7 +56,9 @@ const ProjectsList: React.FC<ProjectsListProps> = ({ loadedImage }) => {
   ));
   return (
     <section className={cl.wrapper}>
-      <div className={cl.title} id='projects'>Some of my works</div>
+      <div className={cl.title} id="projects">
+        Some of my works
+      </div>
       {projects}
     </section>
   );

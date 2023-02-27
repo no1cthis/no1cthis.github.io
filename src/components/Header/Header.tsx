@@ -7,11 +7,6 @@ const Header: React.FC<HeaderProps> = () => {
     <header className={cl.header}>
       <ul className={cl.menu}>
         <li>
-          <a className={cl.link} data-text={"Home"} tabIndex={0}>
-            <span>Home</span>
-          </a>
-        </li>
-        <li>
           <a
             className={cl.link}
             href={"#projects"}

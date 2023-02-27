@@ -28,7 +28,7 @@ const Loader: React.FC<LoaderProps> = ({
 
   useEffect(() => {
     if (!finished) return;
-    const tl = gsap.timeline({ repeat: 3 });
+    const tl = gsap.timeline({ repeat: 2 });
     const tlBackground = gsap.timeline();
     tl.to(text.current, {
       opacity: 1,
